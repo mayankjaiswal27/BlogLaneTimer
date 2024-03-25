@@ -15,7 +15,7 @@ marquee {
 .container{
     width: 100;
     height: 100vh;
-    background-image: url(images/background.png);
+    background-image: url(images/bg2.jpg);
     background-position: center;
     background-size: cover;
     padding: 0 8%;
@@ -75,9 +75,9 @@ marquee {
     }
 }
 footer {
-    background-color: #9f9f9f;
+    background-color: #c5c5c5;
     color: #000000;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     position: fixed;
     left: 0;
@@ -96,6 +96,29 @@ span.minutes{
 }
 span.seconds{
     margin-left:4.5px;
+}
+
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    width: 30px; /* Adjust the size of icons */
+    height: 30px; /* Adjust the size of icons */
+}
+
+.social-links a img {
+    width: 100%;
+    height: auto;
+    border-radius: 20%; /* Makes the icons circular */
+    transition: transform 0.3s ease;
+}
+
+.social-links a img:hover {
+    transform: scale(1.2); /* Enlarge the icons on hover */
 }
 @media screen and (max-width: 1099px) {
     body {
@@ -160,7 +183,7 @@ display: none;
         }
     }
     footer {
-        background-color: #9f9f9f;
+        background-color: #c5c5c5;
         color: #000000;
         padding: 10px;
         text-align: center;
@@ -170,6 +193,27 @@ display: none;
         width: 100%;
         font-weight: bold;
         
+    }
+    .social-links {
+        margin-top: 10px;
+    }
+    
+    .social-links a {
+        display: inline-block;
+        margin: 0 10px;
+        width: 20px; 
+        height: 20px; 
+    }
+    
+    .social-links a img {
+        width: 100%;
+        height: auto;
+        border-radius: 20%;
+        transition: transform 0.3s ease;
+    }
+    
+    .social-links a img:hover {
+        transform: scale(1.2); 
     }
 }
 
