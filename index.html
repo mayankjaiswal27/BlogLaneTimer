@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="images/logosmall.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MernBook</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+    
+    <div class="container">
+       
+        <img src="images/logo.png" class="logo">
+        
+        <div class="content">
+            <!-- <p>Website will be live in</p> -->
+            <h1><span>Launching</span> in</h1>
+            
+            
+            <div class="launch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span class="days">Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span class="hours">Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span class="minutes">Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span class="seconds">Seconds</span>
+                </div>
+            </div>
+        </div>
+        <img src="images/rocket.png" class="rocket">
+    </div>
+    <footer>Made with ❤️ by Mayank Jaiswal</footer>
+    <script>
+        var countDownDate= new Date("April 25,2024 00:00:00").getTime();
+        var x=setInterval(function(){
+            var now=new Date().getTime();
+            var distance=countDownDate-now;
+            var days=Math.floor(distance/(1000*60*60*24));
+            var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+            var seconds=Math.floor((distance%(1000*60))/(1000));
+        
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+                if(distance<0){
+                    clearInterval(x);
+                    document.getElementById("days").innerHTML="00";
+                document.getElementById("hours").innerHTML="00";
+                document.getElementById("minutes").innerHTML="00";
+                document.getElementById("seconds").innerHTML="00";
+                }
+        },1000);
+    </script>
+</body>
+</html>
